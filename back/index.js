@@ -92,6 +92,12 @@ db.connect()
   .then(() => console.log("Conectado a PostgreSQL"))
   .catch((err) => console.error("Error de conexión a PostgreSQL", err));
 
+// crea un endpoint para hacer ping pong 
+app.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
+//---  USUARIOS   -----------------------------------------------------
   
 // Ruta de inicio de sesión
 app.post("/api/login", async (req, res) => {
